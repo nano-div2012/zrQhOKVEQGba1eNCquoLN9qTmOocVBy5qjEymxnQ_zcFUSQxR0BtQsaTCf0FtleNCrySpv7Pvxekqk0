@@ -1,11 +1,248 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <meta http-equiv="Refresh" content="0; url='https://example.com/'" />
-    <script>window.location.replace("https://example.com/");</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS | Kreatif & Multifungsi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body style="margin:0;padding:0;background-color:#ffffff;display:flex;justify-content:center;align-items:center;height:100vh;font-family:sans-serif;">
-    Redirecting...
+<body>
+
+  <!-- ========================================== -->
+  <!-- ========== INTRO VIDEO OVERLAY =========== -->
+  <!-- ========================================== -->
+  <div id="introOverlay" class="intro-overlay">
+    <video id="introVideo" class="intro-video" playsinline muted preload="auto">
+      <!-- Video dari URL online -->
+      <source src="https://www.image2url.com/r2/default/videos/1795055667976-b8c40541-e439-4f80-aaad-16d19ab7c790.mp4" type="video/mp4">
+    </video>
+
+    <!-- Tombol Skip -->
+    <button id="skipBtn" class="skip-btn">
+      Lewati <i class="fas fa-forward"></i>
+    </button>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- ========== LOADING SCREEN ================ -->
+  <!-- ========================================== -->
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- ========== HEADER & NAVIGASI ============= -->
+  <!-- ========================================== -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <i class="fas fa-cube"></i>
+        <span>NEXUS</span>
+      </div>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Beranda</a></li>
+          <li><a href="#fitur">Fitur</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#testimoni">Testimoni</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- ========== HERO SECTION ================== -->
+  <!-- ========================================== -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="badge">🚀 Platform All-in-One</span>
+        <h1>Bangun Ide <span class="gradient-text">Tanpa Batas</span> dengan NEXUS</h1>
+        <p>Solusi kreatif, produktivitas, dan kolaborasi dalam satu tempat. Dilengkapi berbagai fitur canggih untuk mewujudkan visi Anda.</p>
+        <div class="hero-buttons">
+          <a href="#fitur" class="btn btn-primary">Jelajahi Fitur <i class="fas fa-arrow-right"></i></a>
+          <a href="#kontak" class="btn btn-outline">Hubungi Kami</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>10K+</strong> Pengguna</div>
+          <div><strong>50+</strong> Fitur</div>
+          <div><strong>4.9</strong> Rating</div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="glow"></div>
+        <i class="fas fa-rocket rocket-icon"></i>
+        <div class="floating-card card1"><i class="fas fa-chart-line"></i> Analytics</div>
+        <div class="floating-card card2"><i class="fas fa-shield-alt"></i> Secure</div>
+        <div class="floating-card card3"><i class="fas fa-bolt"></i> Fast</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- ========== FITUR SECTION ================= -->
+  <!-- ========================================== -->
+  <section id="fitur" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Fitur <span class="gradient-text">Unggulan</span></h2>
+        <p>Semua yang Anda butuhkan untuk produktivitas maksimal.</p>
+      </div>
+      <div class="fitur-grid">
+        <div class="fitur-card">
+          <div class="icon-box"><i class="fas fa-bolt"></i></div>
+          <h3>Performa Kilat</h3>
+          <p>Optimasi kecepatan tinggi dengan teknologi terbaru.</p>
+        </div>
+        <div class="fitur-card">
+          <div class="icon-box"><i class="fas fa-lock"></i></div>
+          <h3>Keamanan Ekstra</h3>
+          <p>Enkripsi end-to-end untuk data Anda.</p>
+        </div>
+        <div class="fitur-card">
+          <div class="icon-box"><i class="fas fa-cloud"></i></div>
+          <h3>Cloud Sync</h3>
+          <p>Akses dari mana saja, kapan saja.</p>
+        </div>
+        <div class="fitur-card">
+          <div class="icon-box"><i class="fas fa-palette"></i></div>
+          <h3>Kustomisasi</h3>
+          <p>Sesuaikan tampilan sesuai selera.</p>
+        </div>
+        <div class="fitur-card">
+          <div class="icon-box"><i class="fas fa-robot"></i></div>
+          <h3>AI Assistant</h3>
+          <p>Bantuan cerdas untuk tugas harian.</p>
+        </div>
+        <div class="fitur-card">
+          <div class="icon-box"><i class="fas fa-chart-pie"></i></div>
+          <h3>Analitik Real-time</h3>
+          <p>Pantau data secara langsung.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- ========== GALERI SECTION ================ -->
+  <!-- ========================================== -->
+  <section id="galeri" class="section bg-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Galeri <span class="gradient-text">Kreatif</span></h2>
+        <p>Beberapa karya dan momen dari komunitas kami.</p>
+      </div>
+      <div class="galeri-grid">
+        <div class="galeri-item"><i class="fas fa-image"></i><span>Proyek 1</span></div>
+        <div class="galeri-item"><i class="fas fa-camera"></i><span>Proyek 2</span></div>
+        <div class="galeri-item"><i class="fas fa-paint-brush"></i><span>Proyek 3</span></div>
+        <div class="galeri-item"><i class="fas fa-music"></i><span>Proyek 4</span></div>
+        <div class="galeri-item"><i class="fas fa-video"></i><span>Proyek 5</span></div>
+        <div class="galeri-item"><i class="fas fa-cube"></i><span>Proyek 6</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- ========== TESTIMONI SECTION ============= -->
+  <!-- ========================================== -->
+  <section id="testimoni" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Apa Kata <span class="gradient-text">Mereka</span></h2>
+        <p>Testimoni dari pengguna setia NEXUS.</p>
+      </div>
+      <div class="testimoni-grid">
+        <div class="testimoni-card">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"NEXUS benar-benar mengubah cara saya bekerja. Fiturnya lengkap dan mudah digunakan!"</p>
+          <div class="user"><i class="fas fa-user-circle"></i> <strong>Andi Wijaya</strong> <span>Designer</span></div>
+        </div>
+        <div class="testimoni-card">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Keamanan data jadi prioritas utama. Saya merasa tenang menggunakan platform ini."</p>
+          <div class="user"><i class="fas fa-user-circle"></i> <strong>Siti Rahma</strong> <span>CEO Startup</span></div>
+        </div>
+        <div class="testimoni-card">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+          <p>"AI Assistant-nya sangat membantu. Pekerjaan jadi lebih cepat selesai."</p>
+          <div class="user"><i class="fas fa-user-circle"></i> <strong>Budi Santoso</strong> <span>Developer</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- ========== KONTAK SECTION ================ -->
+  <!-- ========================================== -->
+  <section id="kontak" class="section bg-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Hubungi <span class="gradient-text">Kami</span></h2>
+        <p>Ada pertanyaan? Kirim pesan dan kami akan segera merespons.</p>
+      </div>
+      <form class="kontak-form" id="kontakForm">
+        <div class="form-group">
+          <input type="text" id="nama" placeholder="Nama Lengkap" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <textarea id="pesan" rows="4" placeholder="Pesan Anda..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Kirim Pesan <i class="fas fa-paper-plane"></i></button>
+        <div id="formFeedback" class="form-feedback"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- ========== FOOTER ======================== -->
+  <!-- ========================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <i class="fas fa-cube"></i> NEXUS
+        <p>Platform kreatif multifungsi untuk generasi digital.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#fitur">Fitur</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#testimoni">Testimoni</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Ikuti Kami</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 NEXUS. All rights reserved. Dibuat dengan <i class="fas fa-heart"></i></p>
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" class="scroll-top" aria-label="Kembali ke atas"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="script.js"></script>
 </body>
 </html>

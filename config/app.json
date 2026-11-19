@@ -1,6 +1,6 @@
 {
-  "appName": "Web App",
-  "packageName": "com.example.webapp",
-  "orientation": "auto",
-  "permissions": ["internet", "network_state"]
+  "appName": "RILZ WEB",
+  "packageName": "com.rilz.web",
+  "orientation": "portrait",
+  "permissions": []
 }
